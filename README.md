@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LAP-TRINH-WEB
 <<<<<<< HEAD
 LAB2 – LẬP TRÌNH WEB
@@ -257,3 +258,5 @@ Tổng điểm: 10 điểm (Bài 1: 3,5 điểm; Bài 2: 3,5 điểm; Bài 3: 3,
 
 
 >>>>>>> ae9360c (Update README with Lab 2 assignment details)
+=======
+>>>>>>> a7427de (commit Lab 1 LTW)
