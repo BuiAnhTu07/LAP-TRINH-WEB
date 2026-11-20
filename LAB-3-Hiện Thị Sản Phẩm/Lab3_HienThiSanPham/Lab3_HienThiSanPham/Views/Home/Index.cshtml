@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Lab3_HienThiSanPham.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@product.Image"
+                         class="card-img-top"
+                         alt="Sản phẩm ">
+
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+
+                        <p class="card-text">
+                            Mô tả sản phẩm 1.
+                        </p>
+
+                        <p class="text-danger fw-bold">
+                            @product.Price
+                        </p>
+
+                        <a asp-controller="Cart" asp-action="Add" asp-route-productId="@product.Id" class="btn btn-add-cart w-100">
+                            <i class="bi bi-cart-plus"></i> Thêm vào giỏ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

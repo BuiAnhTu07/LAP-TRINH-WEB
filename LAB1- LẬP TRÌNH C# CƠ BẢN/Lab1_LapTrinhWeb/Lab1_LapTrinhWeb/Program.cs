@@ -21,7 +21,7 @@ else
     Console.WriteLine("Chưa đạt");
 }*/
 //Bài 2
-using System;
+/*using System;
 using System.Text;
 class program
 {
@@ -62,9 +62,9 @@ class program
         Console.WriteLine("Tổng tiền trước giảm: " + tienGiam);
         Console.WriteLine("Tiền thanh toán: " + tienThanhToan);
     }
-}
+}*/
 
-//
+
 /*Bài 3. Tính tiền điện theo bậc (2,5 điểm)
 Yêu cầu: Nhập họ tên khách hàng và số kWh tiêu thụ trong tháng. Tính tiền điện lũy tiến
 từng bậc theo bảng đơn giá giả định dành riêng cho bài tập:
@@ -75,10 +75,10 @@ Bậc Lượng điện áp dụng Đơn giá (VNĐ/kWh)
 4 Phần vượt 200 kWh 3.000
 4. Tính tiền điện cộng dồn theo các bậc đã sử dụng (không áp một mức giá cho toàn bộ
 kWh).
-5. Hiển thị họ tên, tổng kWh và tiền điện phải trả (chưa gồm thuế).
+5. Hiển thị họ tên, tổng kWh và tiền9 điện phải trả (chưa gồm thuế).
 Ví dụ: 120 kWh → 50 × 1.800 + 50 × 2.000 + 20 × 2.500 = 240.000 VNĐ */
 
-/*using System;
+using System;
 class program {
     static void Main()
     {
@@ -113,7 +113,7 @@ class program {
         Console.WriteLine("Tổng số Kwh: " + soKwh);
         Console.WriteLine("Tổng tiền phải trả: " + tinhTien);
     }
-} */
+} 
 
 
 /*Bài 4. Máy tính đơn giản (2,5 điểm)
