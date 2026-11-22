@@ -1,33 +1,43 @@
-﻿@model Lab3_HienThiSanPham.viewModel.RegisterViewModel
+﻿@model Lab3_HienThiSanPham.ViewModel.RegisterViewModel
+
 @{
-    ViewData["Title"] = "Dang ki";
+    ViewData["Title"] = "Đăng ký";
 }
 
 <div>
-    <form action="/" method="post">
-        <div class="mp-3">
-            <label asp-for="Fullname"></label>
-            <input asp-for="Fullname" placeholder="Nguyễn Văn A" />
+    <form asp-controller="Account" asp-action="Register" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" class="form-control" placeholder="Nguyễn Văn A" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="Email" class="form-label"></label>
             <input asp-for="Email" class="form-control" placeholder="email@example.com" />
-            @* <span asp-validation-for="Email" class="text-danger"></span>*@
+             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="Password" class="form-label"></label>
             <input asp-for="Password" class="form-control" />
-            @* <span asp-validation-for="Password" class="text-danger"></span>*@
+            <span asp-validation-for="Password" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="ConfirmPassword" class="form-label"></label>
             <input asp-for="ConfirmPassword" class="form-control" />
-            @*  <span asp-validation-for="ConfirmPassword" class="text-danger"></span>*@
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+        <button type="submit" class="btn btn-primary w-100">
+            Đăng ký
+        </button>
     </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
