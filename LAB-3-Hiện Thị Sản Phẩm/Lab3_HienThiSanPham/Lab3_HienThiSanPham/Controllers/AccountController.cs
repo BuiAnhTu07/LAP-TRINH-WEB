@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lab3_HienThiSanPham.Controllers
 {
-    public class AccountController1 : Controller
+    public class AccountController : Controller
     {
         private readonly DbLab3Context _context;
 
-        public AccountController1(DbLab3Context context)
+        public AccountController(DbLab3Context context)
         {
             _context = context;
         }
