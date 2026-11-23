@@ -6,6 +6,7 @@ public class RegisterViewModel
 {
     [Required(ErrorMessage = "Vui lòng nhập họ tên.")]
     public string FullName { get; set; } = string.Empty;
+    
 
     [Required(ErrorMessage = "Vui lòng nhập email.")]
     [EmailAddress(ErrorMessage = "Email không hợp lệ.")]
