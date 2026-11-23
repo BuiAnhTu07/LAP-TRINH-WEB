@@ -1,6 +1,9 @@
 ﻿using Lab3_HienThiSanPham.Models;
 using Lab3_HienThiSanPham.ViewModel;
+using Lab3_HienThiSanPham.ViewModel.LoginViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Lab3_HienThiSanPham.Controllers
 {
@@ -47,5 +50,27 @@ namespace Lab3_HienThiSanPham.Controllers
             }
             return View(model);
         }
-    }
+        //Login
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (!ModelState.IsValid) {
+                return View(model);
+        }
+            var user = _context.Users.FirstOrDefault(u => u.Email == model.Email.Trim());
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "Tài khoảng không tồn tại");
+                return View(model);
+            }
+            if (user.Password != model.Password.Trim()) {
+                ModelState.AddModelError("Password", "Mật khẩu không đúng");
+                return View(model);
+            }
+            var claim = new List<Claim>
+            {
+
+            }
 }
